@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{verbatim}
 
 \author{Marlene Knoche}
 \title{\LaTeX-Seminar}
@@ -62,8 +63,9 @@ Formatierung wird direkt angezeigt
 Formatierung wird beschrieben
 \end{block}
 
-\LaTeX \; ist Vertreter für WYGIWYM
-
+\begin{itemize}
+\item \LaTeX \; ist Vertreter für WYGIWYM
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Betriebssysteme und Editoren}
@@ -91,23 +93,81 @@ Formatierung wird beschrieben
 \end{frame}
 
 
-\begin{frame}{Syntax}
+\begin{frame}[fragile]{Syntax}
+
 \begin{itemize}
-\item 
+\item Groß- und Kleinschreibung ist relevant!
+\item Kommentare beginnen mit \%-Zeichen.
 \end{itemize}
+
+\begin{block}{Befehle:}
+
+\begin{itemize}
+\item $\backslash$\texttt{Befehlsname}
+\item $\backslash$\texttt{Befehlsname}\{\texttt{Option}\}
+\item $\backslash$\texttt{Befehlsname}[\texttt{Option}]\{\texttt{Option}\}
+\end{itemize}
+\end{block}
+
+\begin{block}{Umgebungen:}
+\begin{verbatim}
+	\begin{Umgebungsname}
+	Text und/oder Befehle
+	\end{Umgebungsname}
+\end{verbatim}
+
+Umgebungen müssen immer geschlossen werden.
+
+Zusätzliche Optionsplatzhalter sind möglich.
+
+\end{block}
+
+
 \end{frame}
 
-\section{Header}
-
-\begin{frame}
-\centering
-\huge{Header}
+\begin{frame}[fragile]{Grundstruktur Dokument}
+\begin{enumerate}
+\item Definition einer Dokumentenklasse
+	\begin{itemize}
+		\item \begin{verbatim}\documentclass[Option]{Dokumentenklasse}\end{verbatim}
+		\item z.B. article (scrartcl in KOMA-Script), report (srcreprt in KOMA-Script)
+	\end{itemize}
+\item Packages nachladen und Konfiguration des Dokumentes
+	\begin{itemize}
+		\item Packages laden: \begin{verbatim}\usepackage[Option]{Packagename}\end{verbatim}
+		\item Angabe von Meta-Informationen wie Autor oder Titel
+	\end{itemize}
+\item Dokumenteninhalt innerhalb der \texttt{document}-Umgebung
+	\begin{itemize}
+	\item \begin{verbatim} \begin{document} Text und Befehle \end{document}
+	\end{verbatim}
+	\end{itemize}
+\end{enumerate}
 \end{frame}
 
-\section{Body}
+\begin{frame}[fragile]{Minimalbeispiel}
+
+Minimalistisches Beispiel ohne Packages.
+
+\begin{verbatim}
+	\documentclass{article}
+	\begin{document}
+	\section{Hallo Welt!}
+	Ich bin der tolle Text auf der ersten Seite!
+	\end{document}
+\end{verbatim}
+\end{frame}
+
+\section{Dokument}
 \begin{frame}
 \centering
-\huge{Body}
+\huge{Dokument}
+\end{frame}
+
+\begin{frame}{Gliederungsebenen}
+\begin{itemize}
+\item Mögliche Gliederungsebenen abhängig von verwendeter Dokumentenklasse
+\end{itemize}
 \end{frame}
 
 \section{Weiterführendes}
@@ -126,6 +186,13 @@ Formatierung wird beschrieben
 \begin{frame}
 \centering
 \huge{Ressourcen}
+\end{frame}
+
+\begin{frame}{Literatur und Links}
+\begin{description}
+\item[LaTeX kurz und gut] O'Reilly Verlag, 3. Auflage, Matthias Kalle Dalheimer und Karsten Günther, \\
+ISBN: 978-3-89721-542-9
+\end{description}
 \end{frame}
 
 \begin{frame}
