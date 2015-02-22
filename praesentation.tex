@@ -164,17 +164,141 @@ Minimalistisches Beispiel ohne Packages.
 \huge{Dokument}
 \end{frame}
 
-\begin{frame}{Gliederungsebenen}
+\begin{frame}[fragile]{Gliederungsebenen}
 \begin{itemize}
 \item Mögliche Gliederungsebenen abhängig von verwendeter Dokumentenklasse
+\item section, subsection und subsubsection in allen Dokumentenklassen verfügbar
+\item weitere Ebenen: part, chapter (der section übergeordnet, Dokumentenklasse report), paragraph und subparagraph (der subsubsection zugeordnet)
+\item Syntax jeweils \begin{verbatim} \gliederungsebene{Name} \end{verbatim}
+\item Beispiel siehe Minimalbeispiel
 \end{itemize}
 \end{frame}
+
+\begin{frame}[fragile]{Text formatieren}
+\begin{itemize}
+\item \textbf{fett}: \begin{verbatim}\textbf{fett}\end{verbatim}
+\item \textit{kursiv}:\begin{verbatim}\textit{kursiv}\end{verbatim}
+\item \texttt{Schreibmaschine}: \begin{verbatim}\texttt{Schreibmaschine}\end{verbatim}
+\item {\rmfamily \scshape Kapitälchen}: \begin{verbatim}\textsc{Kapitälchen}\end{verbatim}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Aufzählungen/Listen - I}
+\begin{itemize}
+\item drei Arten von Aufzählungen: \texttt{itemize} (Stichpunkte), \texttt{enumerate} (Nummerierung), \texttt{description} (Beschreibungen)
+\item lassen sich Kombinieren und beliebig verschachteln
+\item Syntax: \begin{verbatim} \begin{listenart} \item Inhalt \end{listenart} \end{verbatim}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Aufzählungen/Listen - III (Beispiel Itemize)}
+
+\begin{minipage}{0.4\textwidth}
+\begin{verbatim}
+	\begin{itemize}
+	\item Stichpunkt 1
+	\item[] 42
+	\item Neuer Stichpunkt
+	\end{itemize}
+\end{verbatim}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+
+	\begin{itemize}
+	\item Stichpunkt 1
+	\item[] 42
+	\item Neuer Stichpunkt
+	\end{itemize}
+
+\end{minipage}
+
+
+\end{frame}
+
+\begin{frame}[fragile]{Aufzählungen/Listen - IV (Beispiel Enumerate)}
+
+\begin{minipage}{0.4\textwidth}
+\begin{verbatim}
+	\begin{enumerate}
+	\item Stichpunkt 1
+	\item [] 42
+	\item Neuer Stichpunkt
+	\end{enumerate}
+\end{verbatim}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+
+	\begin{enumerate}
+	\item Stichpunkt 1
+	\item [] 42
+	\item Neuer Stichpunkt
+	\end{enumerate}
+
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]{Aufzählungen/Listen - V (beispiel Description)}
+
+\begin{minipage}{0.4\textwidth}
+\begin{verbatim}
+	\begin{description}
+	\item [Text] Stichpunkt 1
+	\item [Ultimativ] 42
+	\item [Neuer] Stichpunkt
+	\end{description}
+\end{verbatim}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+
+	\begin{description}
+	\item [Text] Stichpunkt 1
+	\item [Ultimativ] 42
+	\item [Neuer] Stichpunkt
+	\end{description}
+
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}{Grafiken}
+\end{frame}
+
+\begin{frame}{Tabellen}
+\end{frame}
+
+\begin{frame}{Formeln}
+\end{frame}
+
+\begin{frame}{Quellcode einbinden}
+\end{frame}
+
+\begin{frame}{Fußnoten}
+\end{frame}
+
+\begin{frame}{Dokument formatieren - I}
+Titelseite basics
+Schriftgröße
+Seitenlayout
+\end{frame}
+
+\begin{frame}{Dokument formatieren - II}
+Labels und Referenzen
+Verzeichnisse einbinden
+Numerierung der Seiten
+\end{frame}
+
 
 \section{Weiterführendes}
 \begin{frame}
 \centering
 \huge{Weiterführendes}
 \end{frame}
+
+\begin{frame}{Aufteilen von Dokumenten}
+input vs include
+\end{frame}
+
 
 \section{Mein Template}
 \begin{frame}
@@ -192,6 +316,9 @@ Minimalistisches Beispiel ohne Packages.
 \begin{description}
 \item[LaTeX kurz und gut] O'Reilly Verlag, 3. Auflage, Matthias Kalle Dalheimer und Karsten Günther, \\
 ISBN: 978-3-89721-542-9
+\item[TEX Stackexchange] \url{http://tex.stackexchange.com}
+\item[Mein GitHub-Account] \url{https://github.com/Sanguinik}
+\item[Mein Blog] \url{http://www.sanguinik.de}
 \end{description}
 \end{frame}
 
