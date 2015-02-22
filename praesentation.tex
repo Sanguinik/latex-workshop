@@ -183,6 +183,24 @@ Minimalistisches Beispiel ohne Packages.
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Text formatieren - II}
+tiny bis huge
+zeilen und seitenumbrüche
+\end{frame}
+
+
+\begin{frame}{Dokument formatieren - I}
+Titelseite basics
+Schriftgröße
+Seitenlayout
+\end{frame}
+
+\begin{frame}{Dokument formatieren - II}
+Labels und Referenzen
+Verzeichnisse einbinden
+Numerierung der Seiten
+\end{frame}
+
 \begin{frame}[fragile]{Aufzählungen/Listen - I}
 \begin{itemize}
 \item drei Arten von Aufzählungen: \texttt{itemize} (Stichpunkte), \texttt{enumerate} (Nummerierung), \texttt{description} (Beschreibungen)
@@ -191,7 +209,7 @@ Minimalistisches Beispiel ohne Packages.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Aufzählungen/Listen - III (Beispiel Itemize)}
+\begin{frame}[fragile]{Aufzählungen/Listen - II (Beispiel Itemize)}
 
 \begin{minipage}{0.4\textwidth}
 \begin{verbatim}
@@ -215,7 +233,7 @@ Minimalistisches Beispiel ohne Packages.
 
 \end{frame}
 
-\begin{frame}[fragile]{Aufzählungen/Listen - IV (Beispiel Enumerate)}
+\begin{frame}[fragile]{Aufzählungen/Listen - III (Beispiel Enumerate)}
 
 \begin{minipage}{0.4\textwidth}
 \begin{verbatim}
@@ -238,7 +256,7 @@ Minimalistisches Beispiel ohne Packages.
 
 \end{frame}
 
-\begin{frame}[fragile]{Aufzählungen/Listen - V (beispiel Description)}
+\begin{frame}[fragile]{Aufzählungen/Listen - IV (Beispiel Description)}
 
 \begin{minipage}{0.4\textwidth}
 \begin{verbatim}
@@ -261,32 +279,92 @@ Minimalistisches Beispiel ohne Packages.
 
 \end{frame}
 
-\begin{frame}{Grafiken}
+\begin{frame}[fragile]{Grafiken - I}
+
+\begin{itemize}
+\item Benötigt das Nachladen eines Packages: \texttt{graphicx} mit \begin{verbatim}\usepackage{graphicx}\end{verbatim}
+\item Einbinden einer Grafik selbst: \begin{verbatim} \includegraphics[Option]{Dateiname} \end{verbatim} 
+\item Im Optionsbereich wird die Größe des Bilds angegeben
+\item Können auch in \texttt{figure}-Umgebung eingebunden werden
+\end{itemize}
+
 \end{frame}
 
-\begin{frame}{Tabellen}
+\begin{frame}[fragile]{Grafiken - II (Beispiel)}
+\begin{verbatim}
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{Bildname.png}
+	\caption{Bildunterschrift}
+	\label{fig:Beispielbild}
+	\end{figure}
+\end{verbatim}
 \end{frame}
+
+\begin{frame}[fragile]{Tabellen - I}
+\begin{itemize}
+\item Können ohne zusätzliches Package verwendet werden
+\item Packages vorhanden, die andere Formatierungsmöglichkeiten bieten
+\item Syntax: \begin{verbatim} \begin{tabular}[Position]{Spalten} Inhalt \end{tabular} \end{verbatim}
+\item Position ist optional
+\item kann auch in \texttt{table}-Umgebung eingebettet werden
+\item Einzelne Spalteneinträge werden mit \& getrennt
+\item Zeilen müssen mit $\backslash \backslash$ abgeschlossen werden, au0er letzter Zeile
+\item Auch komplexere Tabellen möglich (Kombination von mehreren Zeilen oder Spalten)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Tabellen - II (Beispiel Einfache Tabelle)}
+
+
+\begin{verbatim}
+	
+\begin{table}
+	\begin{tabular}{|l|c|r|}
+	\hline
+	Text & 1234 & Erste Zeile\\
+	\hline
+	Hallo & Welt & !\\
+	\hline
+	\end{tabular}
+	\caption{Beispieltabelle}
+\end{table}
+
+\end{verbatim}
+
+\begin{table}
+	\begin{tabular}{|l|c|r|}
+	\hline
+	Text & 1234 & Erste Zeile\\
+	\hline
+	Hallo & Welt & !\\
+	\hline
+	\end{tabular}
+	\caption{Beispieltabelle}
+\end{table}
+\end{frame}
+
+
 
 \begin{frame}{Formeln}
+\begin{itemize}
+\item 
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Quellcode einbinden}
+\begin{itemize}
+\item 
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Fußnoten}
+\begin{itemize}
+\item 
+\end{itemize}
 \end{frame}
 
-\begin{frame}{Dokument formatieren - I}
-Titelseite basics
-Schriftgröße
-Seitenlayout
-\end{frame}
 
-\begin{frame}{Dokument formatieren - II}
-Labels und Referenzen
-Verzeichnisse einbinden
-Numerierung der Seiten
-\end{frame}
 
 
 \section{Weiterführendes}
