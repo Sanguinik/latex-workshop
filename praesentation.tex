@@ -158,6 +158,17 @@ Minimalistisches Beispiel ohne Packages.
 \end{verbatim}
 \end{frame}
 
+\begin{frame}[fragile]{Empfohlene Packages}
+
+Packages, die Dokument auf Deutsch umstellen und Sonderzeichen wie ä, ö, ß erlauben.
+
+\begin{verbatim}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\end{verbatim}
+\end{frame}
+
 \section{Dokument}
 \begin{frame}
 \centering
@@ -171,10 +182,11 @@ Minimalistisches Beispiel ohne Packages.
 \item weitere Ebenen: part, chapter (der section übergeordnet, Dokumentenklasse report), paragraph und subparagraph (der subsubsection zugeordnet)
 \item Syntax jeweils \begin{verbatim} \gliederungsebene{Name} \end{verbatim}
 \item Beispiel siehe Minimalbeispiel
+\item $\backslash$\texttt{appendix} leitet den Anhang ein 
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Text formatieren}
+\begin{frame}[fragile]{Text formatieren - I}
 \begin{itemize}
 \item \textbf{fett}: \begin{verbatim}\textbf{fett}\end{verbatim}
 \item \textit{kursiv}:\begin{verbatim}\textit{kursiv}\end{verbatim}
@@ -183,22 +195,63 @@ Minimalistisches Beispiel ohne Packages.
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Text formatieren - II}
-tiny bis huge
-zeilen und seitenumbrüche
+\begin{frame}[fragile]{Text formatieren - II}
+
+\begin{itemize}
+\item Zusätzlich können Texte durch Befehle besonders klein oder groß dargestellt werden
+\item Befehle in aufsteigender Reihenfolge der Größe (Groß- und Kleinschreibung ist relevant!):
+\item[] \begin{verbatim} \tiny, \scriptsize, \footnotesize, \small,
+ \normalsize, \large, \Large, \LARGE, \huge, 
+ \Huge \end{verbatim}
+\item[]
+\item Zeilenumbrüche über \begin{verbatim}\newline und \\ \end{verbatim}
+\item Seitenumbrücke über \begin{verbatim}\newpage\end{verbatim}
+
+\end{itemize}
+
 \end{frame}
 
 
-\begin{frame}{Dokument formatieren - I}
-Titelseite basics
-Schriftgröße
-Seitenlayout
+\begin{frame}[fragile]{Dokument formatieren - I}
+
+\begin{itemize}
+\item Zentrale Layouteinstellungen werden mit der Definition der Dokumentenklasse bestimmt
+\item Beispiel: \begin{verbatim}\documentclass[a4paper,11pt, twoside]{scrreprt}\end{verbatim}
+\item Ebenfalls in der Präambel können Autor und Titel des Dokumentes bestimmt werden:
+\item[] \begin{verbatim} \author{Name} 
+\title{Name}\end{verbatim}
+\item Titelseite wird über die \texttt{titlepage}-Option bei der Dokumentenklassendefinition oder über den Befehl $\backslash$\texttt{maketitle}  innerhalb der \texttt{document}-Umgebung eingebunden
+\end{itemize}
+
 \end{frame}
 
-\begin{frame}{Dokument formatieren - II}
-Labels und Referenzen
-Verzeichnisse einbinden
-Numerierung der Seiten
+\begin{frame}[fragile]{Dokument formatieren - II}
+
+\begin{itemize}
+\item Alle Arten von Verzeichnissen (Inhalt, Abbildungen, Tabellen, ...) können automatisch generiert werden
+\item Zumeist mit nur einem Befehl erzeugbar
+\item Befehle: \begin{verbatim}\tableofcontents, \listoffigures, 
+\listoftables, \lstlistoflistings \end{verbatim}
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Dokument formatieren - III}
+
+\begin{itemize}
+
+\item Verweise innerhalb des Dokumentes über Labels und Referenzen mittels:
+\begin{verbatim} \label{myLabel} \ref{myLabel} \end{verbatim}
+
+\item Numerierung der Seiten in Klein- und Großbuchstaben, arabischen oder römischen Ziffern (klein und groß) möglich:
+ \begin{verbatim}\pagenumbering{alph}
+\pagenumbering{Alph}
+\pagenumbering{arabic}
+\pagenumbering{roman}
+\pagenumbering{Roman}\end{verbatim}
+
+\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Aufzählungen/Listen - I}
@@ -346,9 +399,15 @@ Numerierung der Seiten
 
 
 
-\begin{frame}{Formeln}
+\begin{frame}[fragile]{Formeln}
 \begin{itemize}
-\item 
+\item Einbinden von Formeln in Matheumgebung auch ohne zusatzpackage möglich
+\item Für manche Anwendungsfälle jedoch Zusatzpaket z.B. \texttt{amsmath} erforderlich
+\item Inline über zwei einschließende \$-Zeichen bzw.d \begin{verbatim}\( ... \)\end{verbatim}
+\item Beispiel: \begin{verbatim} \( E = m * c^2 \)\end{verbatim}
+\item[] \(E=m*c^2\)
+\item Abgesetzt als Block über: \begin{verbatim} \[ ... \] \end{verbatim}
+\item[] \[E= m * c^2\]
 \end{itemize}
 \end{frame}
 
@@ -364,13 +423,7 @@ Numerierung der Seiten
 \end{itemize}
 \end{frame}
 
-
-
-
-\section{Weiterführendes}
-\begin{frame}
-\centering
-\huge{Weiterführendes}
+\begin{frame}{Silbentrennung}
 \end{frame}
 
 \begin{frame}{Aufteilen von Dokumenten}
