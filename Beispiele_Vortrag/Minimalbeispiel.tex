@@ -10,7 +10,6 @@
 
 \usepackage{graphicx}
 
-%Formulare in PDF erstellen? TODO
 \usepackage[citecolor = black,colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
 
 \input{listings-konfig}
@@ -106,7 +105,7 @@ Noch etwas Text.
 \end{description}
 
 \section{Tabellen}
-%dicke Linien, Tabellenkopf
+
 \begin{table}[h]
 \centering
 \begin{tabular}{|c||l|r|}
@@ -127,9 +126,9 @@ In diesem Text referenziere ich eine Tabelle. Diese ist Tabelle \ref{tab:stadt}.
 Eine Formel wäre cool! $a^2 + b^2 = c^2$
 \[ Obstsalat_4 = \frac{Apfel}{Birnen} \]
 
-\section{Listings}%referenz auf Listing
-\label{meinCode}%TODO
-\begin{lstlisting}[caption=Example]
+\section{Listings}
+
+\begin{lstlisting}[caption=Example, label=meinCode]
 public class Example {
 public static void main(String...args){
 System.out.println("hello World");
